@@ -12,7 +12,7 @@ public class Main {
         List<Teacher> teacherList = new ArrayList<>();
         teacherList.add(halisa);
         teacherList.add(hena);
-        teacherList.add(heidi)
+        teacherList.add(heidi);
 
         Student sid = new Student(1,"Sid",4);
         Student tammy = new Student(2,"Tammy",12);
@@ -24,6 +24,31 @@ public class Main {
         studentList.add(stella);
 
         School ghs = new School(teacherList,studentList);
+        Teacher weishan = new Teacher(6,"Megan", 900);
+
+        ghs.addTeacher(weishan);
+
+
+        sid.payFees(5000);
+        tammy.payFees(6000);
+        System.out.println("GHS has earned $"+ ghs.getTotalMoneyEarned());
+
+        System.out.println("------Making SCHOOL PAY SALARY----");
+        halisa.receiveSalary(halisa.getSalary());
+        System.out.println("GHS has spent for salary to " + halisa.getName()
+                +" and now has $" + ghs.getTotalMoneyEarned());
+
+        heidi.receiveSalary(heidi.getSalary());
+        System.out.println("GHS has spent for salary to " + heidi.getName()
+                +" and now has $" + ghs.getTotalMoneyEarned());
+
+
+        System.out.println(tammy);
+
+        hena.receiveSalary(hena.getSalary());
+
+        System.out.println(hena);
+
     }
 
 
